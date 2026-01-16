@@ -1,60 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | News homepage</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Frontend Mentor | News homepage</title>
 </head>
+
 <body>
+<div class="wrapper">
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+<header>
+    <a href="/" class="logo-link">
+        <img src="./assets/images/logo.svg" alt="W. - Go to homepage">
+    </a>
 
-  The Bright Future of Web 3.0?
+    <!-- Hidden switch for menu -->
+    <input type="checkbox" id="main-menu-toggle" hidden>
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
+    <!-- Hamburger (opens menu on mobile) -->
+    <label for="main-menu-toggle" class="menu-icon">
+        <img src="./assets/images/icon-menu.svg" alt="Open menu">
+    </label>
 
-  Read more
+    <!-- ONE nav for mobile + desktop -->
+    <nav class="main-nav" aria-label="Main navigation">
+        <!-- Close icon (only shows on mobile) -->
+        <label for="main-menu-toggle" class="close-icon">
+            <img src="./assets/images/icon-menu-close.svg" alt="Close menu">
+        </label>
 
-  New 
+        <ul>
+            <li><a href="#" aria-current="page">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+        </ul>
+    </nav>
 
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
+    <!-- Dark background (closes menu when clicked) -->
+    <label for="main-menu-toggle" class="mobile-overlay"></label>
+</header>
+    
+    <main class="grid-container">
+    
+        <section class="hero">
+            <picture>
+                <source srcset="./assets/images/image-web-3-desktop.jpg" media="(min-width: 769px)">
+                <img src="./assets/images/image-web-3-mobile.jpg" alt="Web 3.0 technology">
+            </picture>
+    
+            <div class="hero-content">
+                <h1>The Bright Future of Web 3.0?</h1>
+    
+                <div class="hero-text">
+                    <p>We dive into the next evolution of the web that claims to put the power of the platforms back
+                        into the
+                        hands of the people. But is it really fulfilling its promise?</p>
+    
+                    <a href="#" class="btn">Read more</a>
+                </div>
+            </div>
+        </section>
+        <aside class="new">
+            <h2 class="new-title">New</h2>
+    
+            <article class="new-story">
+                <h3 class="story-title">Hydrogen VS Electric Cars</h3>
+                <p class="story-excerpt">Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </article>
+    
+            <hr class="divider">
+    
+            <article class="new-story">
+                <h3 class="story-title">The Downsides of AI Artistry</h3>
+                <p class="story-excerpt">What are the possible adverse effects of on-demand AI image generation?</p>
+            </article>
+    
+            <hr class="divider">
+    
+            <article class="new-story">
+                <h3 class="story-title">Is VC Funding Drying Up?</h3>
+                <p class="story-excerpt">Private funding by VC firms is down 50% YOY. We take a look at what that means.
+                </p>
+            </article>
+        </aside>
+        <section class="popular">
+            <article class="story">
+                <img src="./assets/images/image-retro-pcs.jpg" alt="Retro PC setup">
+                <div>
+                    <span class="number">01</span>
+                    <h3>Reviving Retro PCs</h3>
+                    <p>What happens when old PCs are given modern upgrades?</p>
+                </div>
+            </article>
+    
+            <article class="story">
+                <img src="./assets/images/image-top-laptops.jpg" alt="Modern laptops">
+                <div>
+                    <span class="number">02</span>
+                    <h3>Top 10 Laptops of 2022</h3>
+                    <p>Our best picks for various needs and budgets.</p>
+                </div>
+            </article>
+    
+            <article class="story">
+                <img src="./assets/images/image-gaming-growth.jpg" alt="Gaming setup">
+                <div>
+                    <span class="number">03</span>
+                    <h3>The Growth of Gaming</h3>
+                    <p>How the pandemic has sparked fresh opportunities.</p>
+                </div>
+            </article>
+        </section>
+    </main>
 
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
 
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
+</div>
 
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
+   
 
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
 
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
+
+
+
+
 </body>
+
 </html>

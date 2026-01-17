@@ -73,8 +73,9 @@ header {
     background: white;
     padding: 7rem 1.5rem 2rem;
     transform: translateX(100%);
-    transition: transform 0.3s ease;
+  
     z-index: 1000;
+    overflow-y: auto;
 }
 
 .main-nav ul {
@@ -268,7 +269,7 @@ header {
 }
 
 /* ONLY ONE media query for desktop */
-@media (min-width: 768px) {
+@media (min-width: 48em) {
     .wrapper {
        max-inline-size: 1200px;
         

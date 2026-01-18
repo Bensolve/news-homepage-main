@@ -107,7 +107,7 @@ header {
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s;
+  
     z-index: 999;
 }
 
@@ -209,7 +209,7 @@ header {
     font-size: 1.25rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
-    transition: color 0.3s;
+  
 }
 
 .story-title:hover {
@@ -256,7 +256,7 @@ header {
     font-size: 1.1rem;
     font-weight: 800;
     color: var(--very-dark-blue);
-    transition: color 0.3s;
+    
 }
 
 .story h3:hover {

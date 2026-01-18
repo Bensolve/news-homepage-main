@@ -19,7 +19,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    font-size: 15px;
+    font-size: 0.9375rem;
     background-color: hsl(36, 100%, 99%);
     color: hsl(236, 13%, 42%);
     line-height: 1.6;
@@ -315,6 +315,7 @@ header {
     /* Popular row */
     .popular {
         grid-template-columns: repeat(3, 1fr);
+        grid-area: popular;
     }
 
     /* Full grid: New on side */
@@ -336,7 +337,5 @@ header {
        /* Keeps new content at top, no extra empty space */
    }
 
-   .popular {
-       grid-area: popular;
-   }
+ 
 }
